@@ -1,0 +1,53 @@
+#root {
+  margin: 0 auto;
+}
+
+/*MENU*/
+.linkLogo{
+  color:white;
+  text-decoration: none;
+}
+.linkLogo:hover{
+  opacity: 0.7;
+  font-size: 18px;
+  color:aqua;
+}
+ul li a{
+  color:white;
+  text-decoration: none;
+}
+ul li a:hover{
+  opacity: 0.7;
+  font-size: 18px;
+  color:aqua;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #161337;
+  height: 10vh;
+  border-radius: 3px;
+}
+
+.nav-list{
+  display: flex;
+  list-style: none;
+  margin-bottom: 0rem;
+}
+  .nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+
+  .formulario{
+    margin-top: 15vh;
+    width: 80vh;
+  }
+.aqui{
+  margin-top: 8px;
+}
+.Board{
+  display: flex;
+  flex-wrap: wrap;
+}
