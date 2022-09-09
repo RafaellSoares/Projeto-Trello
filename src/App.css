@@ -2,6 +2,10 @@
   margin: 0 auto;
 }
 
+body{
+  background-color:	#c5cbe1;
+}
+
 /*MENU*/
 .linkLogo{
   color:white;
@@ -12,11 +16,11 @@
   font-size: 18px;
   color:aqua;
 }
-ul li a{
-  color:white;
+.nav-list a{
+  color:White;
   text-decoration: none;
 }
-ul li a:hover{
+.nav-list a:hover{
   opacity: 0.7;
   font-size: 18px;
   color:aqua;
@@ -27,9 +31,8 @@ nav{
   align-items: center;
   background-color: #161337;
   height: 10vh;
-  border-radius: 3px;
+  border-radius: 2px;
 }
-
 .nav-list{
   display: flex;
   list-style: none;
@@ -40,14 +43,29 @@ nav{
     margin-left: 32px;
   }
 
-  .formulario{
-    margin-top: 15vh;
-    width: 80vh;
-  }
-.aqui{
-  margin-top: 8px;
+/*Formulario*/
+.formulario{
+  margin-top: 15vh;
+  width: 80vh;
 }
+
+/*Conteudo Board*/
 .Board{
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.Board ul{
+  box-shadow: 6px 6px 4px #161337;
+}
+.Board a{
+  color: black;
+  text-decoration: none;
+}
+.Board a:hover{
+  opacity: 0.7;
+  font-size: 18px;
+  color:darkblue;
 }

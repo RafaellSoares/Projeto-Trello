@@ -1,38 +1,30 @@
 import { useState, useEffect } from 'react'
-import Menu from './Components/Menu'
-import Formulario from './Components/Formluario'
+import {BrowserRouter,Routes,Route,} from "react-router-dom";
+import Formulario from './Components/Formulario'
 import Rodape from './Components/Rodape'
 import api from './service/api'
 import User from './Components/User'
 import './App.css'
+import Menu from './Components/Menu';
+import Lista from './Components/Listas';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const [Users, setUsers] = useState([])
-
-
-  const getUsers = async () => {
-    const listUsers = await api
-                                .get()
-                                .then(response => response.data)
-                                .catch(err => console.log(err))
-
-    console.log(listUsers) 
-    setUsers([listUsers])                           
-  }
-
-  useEffect(() => {
-    getUsers()
-  }, [])
 
 
   return (
-    <div className='app'>
-      <Menu/>
+    <BrowserRouter>
+      <Routes>
+
+      <Route path="/" element={<Menu/>}>
+        <Route path="User" element={<User/>}>
+          <Route path=":IDBOARD" element={<Lista/>} />
+        </Route>
+      </Route>
       
-     <User usuario={Users[0]}></User>
-    </div>
+    </Routes>
+  </BrowserRouter>
+
+
 
   )
 }

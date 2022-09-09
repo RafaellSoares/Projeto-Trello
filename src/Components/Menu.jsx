@@ -1,18 +1,20 @@
 import React from 'react';
+import { Outlet, Link } from "react-router-dom";
 
 export default function Menu(){
     return(
         <header> 
-            <nav className=''>
-                    <a className='linkLogo' href='#'>LOGO</a>
+            <nav>
+                <Link to="/" className='linkLogo'>Logo</Link>
                     <ul className='nav-list'>
-                        <li><a href="#">link1</a></li>
+                        <li><Link to="/User">Usuario</Link></li>
                         <li><a href="#">link2</a></li>
                         <li><a href="#">link3</a></li>
                         <li><a href="#">link3</a></li>
                         <li><a href="#">link3</a></li>
                     </ul>
             </nav>
+            <Outlet/>
     </header>
     )
 }
