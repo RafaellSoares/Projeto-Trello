@@ -5,6 +5,9 @@
 body{
   background-color:	#c5cbe1;
 }
+.container{
+  margin-top: 10vh;
+}
 
 /*MENU*/
 .linkLogo{
@@ -68,4 +71,40 @@ nav{
   opacity: 0.7;
   font-size: 18px;
   color:darkblue;
+}
+
+.Cards ul{
+  background-color: white;
+}
+.perfil{
+  margin:2vh; 
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+}
+.titulo{
+  padding: 7px;
+  margin:2vh; 
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  box-shadow: 6px 6px 4px #161337;
+}
+.perfil h4{
+  margin-left: 2vh;
+}
+.voltar{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+.btn{
+  display: flex;
+  flex-direction: row-reverse;
 }

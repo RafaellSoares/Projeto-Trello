@@ -16,11 +16,15 @@ function App() {
       <Routes>
 
       <Route path="/" element={<Menu/>}>
-        <Route path="User" element={<User/>}>
+        
+        <Route path="User" element={<User/>}/>
+
+        <Route path="Lista" element={<Lista/>}>
           <Route path=":IDBOARD" element={<Lista/>} />
         </Route>
+
       </Route>
-      
+
     </Routes>
   </BrowserRouter>
 

@@ -23,25 +23,17 @@ export default function User() {
 
     return (
         <div className="container">
-            <div class="row justify-content-center text-center">
-            <div class="col">
-                
-            <img src={Users[0]?.avatarUrl + "/170.png"} />
-            <p>{Users[0]?.id}</p>
-            <p>{Users[0]?.fullName}</p>
+            <div className='text-center'>
+            <h2 className="titulo">Quadros</h2>
+            </div>
             
-            </div>
-            </div>
-
-            <div class="row justify-content-between">
-
-
+            <div className="row justify-content-between">
                 {Users[0]?.boards.map(quadro => {
                     return (
                             <div className="col-4 Board">
                                 <ul className="list-group">
                                     <li className="list-group-item text-center">Nome: {quadro.name}</li>
-                                    <li className="list-group-item"><Link to={`/User/${quadro.id}`} key={quadro.id}> id: {quadro.id}</Link></li>
+                                    <li className="list-group-item"><Link to={`/Lista/${quadro.id}`} key={quadro.id}> id: {quadro.id}</Link></li>
                                 </ul>
                             </div>
                             )

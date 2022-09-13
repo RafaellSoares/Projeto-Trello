@@ -1,17 +1,14 @@
 import React from 'react';
+import Perfil from './Perfil';
 import { Outlet, Link } from "react-router-dom";
 
 export default function Menu(){
     return(
         <header> 
             <nav>
-                <Link to="/" className='linkLogo'>Logo</Link>
+                <Perfil/>
                     <ul className='nav-list'>
-                        <li><Link to="/User">Usuario</Link></li>
-                        <li><a href="#">link2</a></li>
-                        <li><a href="#">link3</a></li>
-                        <li><a href="#">link3</a></li>
-                        <li><a href="#">link3</a></li>
+                        <li><Link to="/User">Inicio</Link></li>
                     </ul>
             </nav>
             <Outlet/>
