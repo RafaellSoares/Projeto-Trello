@@ -3,7 +3,6 @@ import api from '../service/api';
 import { Outlet, Link } from "react-router-dom";
 
 export default function User() {
-
     const [Users, setUsers] = useState([])
 
     const getUsers = async () => {
@@ -20,28 +19,24 @@ export default function User() {
       getUsers()
     }, [])
 
-
     return (
         <div className="container">
             <div className='text-center'>
-            <h2 className="titulo">Quadros</h2>
+                <h2 className="titulo">Quadros</h2>
             </div>
-            
             <div className="row justify-content-between">
                 {Users[0]?.boards.map(quadro => {
                     return (
                             <div className="col-4 Board">
                                 <ul className="list-group">
                                     <li className="list-group-item text-center">Nome: {quadro.name}</li>
-                                    <li className="list-group-item"><Link to={`/Lista/${quadro.id}`} key={quadro.id}> id: {quadro.id}</Link></li>
+                                    <li className="list-group-item"><Link to={`/Lista/${quadro.id}`} key={quadro.id}> <button className='btn btn-primary'>Ir para o quadro</button></Link></li>
                                 </ul>
                             </div>
                             )
                 })}
-
             </div>
-
-                <Outlet/>
+            <Outlet/>
         </div>
     )
 }

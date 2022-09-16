@@ -8,7 +8,7 @@ export default function Menu(){
             <nav>
                 <Perfil/>
                     <ul className='nav-list'>
-                        <li><Link to="/User">Inicio</Link></li>
+                        <li><Link to="/">Inicio</Link></li>
                     </ul>
             </nav>
             <Outlet/>

@@ -4,6 +4,7 @@ import api from '../service/api';
 import { Link } from "react-router-dom";
 
 export default function Lista() {
+    
     let params = useParams();
 
     const [List, setLists] = useState([])
@@ -27,9 +28,8 @@ export default function Lista() {
             <div className='text-center'>
             <h2 className="titulo">{List[0]?.name}</h2>
             </div>
-            <div className='a'>
-            <button className='btn btn-primary'><Link to="/User" className="voltar">Voltar</Link></button>
-            </div>
+
+
             
             <div className="row justify-content-between Cards">
 
@@ -49,6 +49,9 @@ export default function Lista() {
                     )
                 })}
 
+            </div>
+            <div className='btnVoltar'>
+            <Link to="/" className="voltar"><button className='btn btn-primary float-end'>Voltar</button></Link>
             </div>
         </div>
     )

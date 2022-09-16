@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import api from '../service/api';
-import { Outlet, Link } from "react-router-dom";
 
 export default function Perfil() {
 
@@ -15,7 +14,7 @@ export default function Perfil() {
       console.log(listUsers) 
       setUsers([listUsers])                           
     }
-  
+    
     useEffect(() => {
       getUsers()
     }, [])

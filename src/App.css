@@ -105,6 +105,15 @@ nav{
   color: white;
 }
 .btn{
+  font-size: 18px;
   display: flex;
   flex-direction: row-reverse;
+}
+.btn-primary:hover{
+  font-size: 21px;
+  background-color: #0210cc;
+}
+
+.btnVoltar{
+  margin-top: 6vh;
 }
